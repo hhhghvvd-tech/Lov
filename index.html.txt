@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إليك</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6e6;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            animation: beat 1.2s infinite;
+        }
+
+        .heart {
+            background-color: #ff3366;
+            display: inline-block;
+            height: 200px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 200px;
+            transform: rotate(-45deg);
+            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.5);
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            background-color: #ff3366;
+            border-radius: 50%;
+            height: 200px;
+            position: absolute;
+            width: 200px;
+        }
+
+        .heart:before {
+            top: -100px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 100px;
+            top: 0;
+        }
+
+        .text-inside {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            text-align: center;
+            top: 45%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            direction: rtl;
+            line-height: 1.6;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.15); }
+            80% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart-container">
+        <div class="heart"></div>
+        <div class="text-inside">
+            هتان<br>
+            أحبك
+        </div>
+    </div>
+
+</body>
+</html>
